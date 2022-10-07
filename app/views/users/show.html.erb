@@ -1,0 +1,19 @@
+<h1>Users#show</h1>
+<%=@user.name%><br>
+<%=@user.body%><br>
+
+<h2>Add a comment:</h2>
+<%#debugger%>
+<%= form_with model: @user, url: user_comments_path(@user.id)  , metthod: :patch do |form| %>
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>Users#edit</h1>
+
+<%= form_for @user do |f|%>
+
+  <%= f.label "name"%><br>
+  <%= f.text_field :name%><br>
+
+    <%= f.label "body"%><br>
+  <%= f.text_field :body%><br>
+
+    <%= f.submit%>
+<%end%>

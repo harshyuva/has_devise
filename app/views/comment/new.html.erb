@@ -1,0 +1,15 @@
+<h1>Add a comments:</h1>
+<%#debugger%>
+<%= form_with model: @comment, url:  comments_create_path(user.id)  , metthod: :post do |form| %>
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
